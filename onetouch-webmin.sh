@@ -5,7 +5,7 @@
 
 clear
 figlet OneTouch-Web
-ipserver=$(hostname -I)
+ipserver= $(hostname -I)
 echo ""
 
 ### ELeccion de que quieres hacer
@@ -25,8 +25,8 @@ apt-get install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtim
 echo "Recursos Instalados"
 echo ""
 echo "Instando webmin..."
-wget http://prdownloads.sourceforge.net/webadmin/webmin_1.999-2_all.deb -y  &> /dev/null
-dpkg --install webmin_1.999-2_all.deb -y &> /dev/null
+wget http://prdownloads.sourceforge.net/webadmin/webmin_1.999-2_all.deb -y
+dpkg --install webmin_1.999-2_all.deb -y
 echo "Instalacion completada"
 echo ""
 echo "Para acceder a Webmin dirigete a esta url https://$ipserver:10000"
