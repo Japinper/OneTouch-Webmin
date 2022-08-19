@@ -22,11 +22,13 @@ echo "[/]Actualizaciones realizadas"
 echo ""
 echo "Instalando recursos necerarios..."
 apt-get install perl libnet-ssleay-perl openssl libauthen-pam-perl libpam-runtime libio-pty-perl apt-show-versions python unzip -y &> /dev/null
+apt-get install shared-mime-info &> /dev/null
+apt --fix-broken install &> /dev/null
 echo "Recursos Instalados"
 echo ""
 echo "Instando webmin..."
-wget http://prdownloads.sourceforge.net/webadmin/webmin_1.999-2_all.deb -y
-dpkg --install webmin_1.999-2_all.deb -y
+wget http://prdownloads.sourceforge.net/webadmin/webmin_1.999-2_all.deb &> /dev/null
+dpkg --install webmin_1.999-2_all.deb &> /dev/null
 echo "Instalacion completada"
 echo ""
 echo "Para acceder a Webmin dirigete a esta url https://$ipserver:10000"
