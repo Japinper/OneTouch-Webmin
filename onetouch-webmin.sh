@@ -5,7 +5,7 @@
 
 clear
 figlet OneTouch-Web
-ipserver = $(hostname -I)
+ipserver=$(hostname -I)
 echo ""
 
 ### ELeccion de que quieres hacer
